@@ -1,0 +1,43 @@
+dataset:
+  name: Pandaset
+  dataset_path: path_to_dataset
+  cache_dir: ./logs/cache
+  test_result_folder: './logs/test'
+  test_split: ['046', '027', '013', '029']
+  training_split: ['035', '042', '028', '043', '019', '038', '011', '016', '037', '005', '044', '002', '003', '001',
+  '033', '023', '041', '040', '024', '034', '039', '030', '017', '032']
+  validation_split: ['021', '015']
+  use_cache: true
+  sampler:
+    name: 'SemSegRandomSampler'
+model:
+  name: RandLANet
+  batcher: DefaultBatcher
+  num_classes: 3
+  num_points: 81920
+  num_neighbors: 16
+  framework: torch
+  num_layers: 4
+  ignored_label_inds: [0]
+  sub_sampling_ratio: [4, 4, 4, 4]
+  in_channels: 3
+  dim_features: 8
+  dim_output: [16, 64, 128, 256]
+  grid_size: 0.06
+  augment:
+    recenter:
+      dim: [ 0, 0 ]
+pipeline:
+  name: SemanticSegmentation
+  max_epoch: 50
+  save_ckpt_freq: 5
+  device: gpu
+  optimizer:
+    lr: 0.001
+  batch_size: 2
+  main_log_dir: './logs'
+  logs_dir: './logs'
+  scheduler_gamma: 0.9886
+  test_batch_size: 1
+  train_sum_dir: './logs/training_log'
+  val_batch_size: 1
