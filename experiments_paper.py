@@ -1,4 +1,6 @@
-from demo_clear_height import *
+from data_handling import *
+from contour_functions import *
+
 from statistics import mean
 import time
 

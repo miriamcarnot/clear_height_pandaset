@@ -1,4 +1,4 @@
-from main import *
+from main_labels import *
 from statistics import mean
 import time
 import pandas as pd

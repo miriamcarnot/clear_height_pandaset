@@ -1,4 +1,3 @@
-# from ml3d.vis import Visualizer, LabelLUT
 import open3d.ml as _ml3d
 import open3d.ml.tf as ml3d
 

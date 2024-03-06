@@ -1,4 +1,4 @@
-from main_pandaset import *
+from main_inference import *
 import os
 import time
 
@@ -47,9 +47,7 @@ def compare_preds_and_labels(pandaset_path, test_seqs):
 def main():
     pandaset_path = os.path.join(os.getcwd(), 'pandaset')
     print(pandaset_path)
-
     test_seqs = ['046', '027', '013', '029']
-
     print("Experiment to compare the results when using the annotations or the predictions")
     compare_preds_and_labels(pandaset_path, test_seqs)
 

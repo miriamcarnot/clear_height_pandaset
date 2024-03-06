@@ -144,7 +144,7 @@ def visualize_results_for_one_seq(pandaset_path, seq):
 
 def main():
     parser = argparse.ArgumentParser(description='Run Clear Height Analysis')
-    parser.add_argument('-p', '--path', help='path to the dataset', default='/home/miriam/Dokumente/datasets/pandaset')
+    parser.add_argument('-p', '--path', help='path to the dataset')
     parser.add_argument('-s', '--sequence', help='dataset sequence to run, check readme for options', default="046")
     args = parser.parse_args()
 
