@@ -95,10 +95,6 @@ def main():
 
     all_geometries = pcds_list + multiple_geometries_list
 
-    # show images of a car equipped with lidar
-    car_images = Image.open('combined_images.png')
-    car_images.show()
-
     if windows:
         visualize_pcds_one_after_another(all_geometries)
         # visualize the greenery to cut on the images
